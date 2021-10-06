@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="GroupAss.admin" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+      <link rel="stylesheet" href="master.css">
+      
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="jumbotron text-center">
+        <img src="Images/bannerS.jpg" />
+</div>
+ <asp:ContentPlaceHolder ID="Side" runat="server">
+     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+     <div class="menu">
+        <a href="profile.aspx" runat="server" id="profile">My Profile</a>
+        <a href="maintenance.aspx"  runat="server" id="news">News and Event</a>
+        <a href="communication.aspx" runat="server" id="forum">Forum</a>
+        <asp:LinkButton ID="lbLogout" CssClass="a" runat="server" OnClick="lbLogout_Click">Logout</asp:LinkButton>
+        
+    </div>
+ </asp:ContentPlaceHolder>
+
+ 
+        <div class="content">
+        <asp:ContentPlaceHolder ID="Main" runat="server">
+           
+                        </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <img src="Images/intilogo.png" />
+                <p>@Copyright Goes to Aquatic Club of INTI UNIVERSITY NILAI</p>
+            </footer>
+            </div>
+        </form>
+   
+</body>
+</html>
